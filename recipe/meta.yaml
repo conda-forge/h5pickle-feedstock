@@ -23,7 +23,6 @@ requirements:
   run:
     - python
     - h5py
-    - toolz
     - cachetools
 
 test:
