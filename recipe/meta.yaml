@@ -1,6 +1,6 @@
 {% set name = "h5pickle" %}
-{% set version = "0.3" %}
-{% set sha256 = "6f5021ad74b2f175bfca35ee8c68f9ae618ffcad19bc996ed60359ff5937232c" %}
+{% set version = "0.4" %}
+{% set sha256 = "76ec8bf05463ed4522188eda1b162641bdbf06754bb30787fcb1fadae7fe9329" %}
 
 package:
   name: {{ name|lower }}
