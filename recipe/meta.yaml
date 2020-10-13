@@ -1,6 +1,6 @@
 {% set name = "h5pickle" %}
-{% set version = "0.4.1" %}
-{% set sha256 = "a1691fea4954fa5439e8e9276c267f0efcceb5d62f9051a55fdbbfd853a4f526" %}
+{% set version = "0.4.2" %}
+{% set sha256 = "cfad571010e8018aaa5f7909a58fef2afe61e685bba8b3bca63fdcde494507b3" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Wrapper for h5py with pickle capabilities'
+  summary: Wrapper for h5py with pickle capabilities
 
   description: |
     This module provides a wrapper for the h5py classes to allow pickling of
