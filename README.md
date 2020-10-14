@@ -124,4 +124,5 @@ Feedstock Maintainers
 =====================
 
 * [@Anthchirp](https://github.com/Anthchirp/)
+* [@DaanVanVugt](https://github.com/DaanVanVugt/)
 
