@@ -1,6 +1,5 @@
 {% set name = "h5pickle" %}
-{% set version = "0.4.1" %}
-{% set sha256 = "a1691fea4954fa5439e8e9276c267f0efcceb5d62f9051a55fdbbfd853a4f526" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -9,12 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: cfad571010e8018aaa5f7909a58fef2afe61e685bba8b3bca63fdcde494507b3
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -30,11 +29,11 @@ test:
     - h5pickle
 
 about:
-  home: http://github.com/exteris/h5pickle
+  home: https://pypi.org/project/h5pickle
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Wrapper for h5py with pickle capabilities'
+  summary: Wrapper for h5py with pickle capabilities
 
   description: |
     This module provides a wrapper for the h5py classes to allow pickling of
@@ -42,9 +41,9 @@ about:
     a new file is opened when a Group, Dataset or File is unpickled. Ergo, this
     will only work well on shared filesystems, and for reading files (SWMR
     should be fine too).
-  doc_url: https://github.com/exteris/h5pickle
-  dev_url: https://github.com/exteris/h5pickle
+  dev_url: https://github.com/DaanVanVugt/h5pickle
 
 extra:
   recipe-maintainers:
-    - Exteris
+    - DaanVanVugt
+    - Anthchirp
